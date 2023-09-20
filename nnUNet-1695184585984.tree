@@ -1,0 +1,247 @@
+├───📁 documentation/
+│   ├───📁 assets/
+│   │   ├───📄 amos2022_sparseseg10.png
+│   │   ├───📄 amos2022_sparseseg10_2d.png
+│   │   ├───📄 dkfz_logo.png
+│   │   ├───📄 HI_Logo.png
+│   │   ├───📄 nnU-Net_overview.png
+│   │   ├───📄 regions_vs_labels.png
+│   │   └───📄 sparse_annotation_amos.png
+│   ├───📄 benchmarking.md
+│   ├───📄 changelog.md
+│   ├───📄 convert_msd_dataset.md
+│   ├───📄 dataset_format.md
+│   ├───📄 dataset_format_inference.md
+│   ├───📄 explanation_normalization.md
+│   ├───📄 explanation_plans_files.md
+│   ├───📄 extending_nnunet.md
+│   ├───📄 how_to_use_nnunet.md
+│   ├───📄 installation_instructions.md
+│   ├───📄 manual_data_splits.md
+│   ├───📄 pretraining_and_finetuning.md
+│   ├───📄 region_based_training.md
+│   ├───📄 run_inference_with_pretrained_models.md
+│   ├───📄 setting_up_paths.md
+│   ├───📄 set_environment_variables.md
+│   ├───📄 tldr_migration_guide_from_v1.md
+│   └───📄 __init__.py
+├───📁 nnunetv2/
+│   ├───📁 batch_running/
+│   │   ├───📁 benchmarking/
+│   │   │   ├───📄 generate_benchmarking_commands.py
+│   │   │   ├───📄 summarize_benchmark_results.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📁 release_trainings/
+│   │   │   ├───📁 nnunetv2_v1/
+│   │   │   │   ├───📄 collect_results.py
+│   │   │   │   ├───📄 generate_lsf_commands.py
+│   │   │   │   └───📄 __init__.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📄 collect_results_custom_Decathlon.py
+│   │   ├───📄 collect_results_custom_Decathlon_2d.py
+│   │   ├───📄 generate_lsf_runs_customDecathlon.py
+│   │   └───📄 __init__.py
+│   ├───📁 dataset_conversion/
+│   │   ├───📁 datasets_for_integration_tests/
+│   │   │   ├───📄 Dataset996_IntegrationTest_Hippocampus_regions_ignore.py
+│   │   │   ├───📄 Dataset997_IntegrationTest_Hippocampus_regions.py
+│   │   │   ├───📄 Dataset998_IntegrationTest_Hippocampus_ignore.py
+│   │   │   ├───📄 Dataset999_IntegrationTest_Hippocampus.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📄 convert_MSD_dataset.py
+│   │   ├───📄 convert_raw_dataset_from_old_nnunet_format.py
+│   │   ├───📄 Dataset027_ACDC.py
+│   │   ├───📄 Dataset073_Fluo_C3DH_A549_SIM.py
+│   │   ├───📄 Dataset114_MNMs.py
+│   │   ├───📄 Dataset115_EMIDEC.py
+│   │   ├───📄 Dataset120_RoadSegmentation.py
+│   │   ├───📄 Dataset137_BraTS21.py
+│   │   ├───📄 Dataset218_Amos2022_task1.py
+│   │   ├───📄 Dataset219_Amos2022_task2.py
+│   │   ├───📄 Dataset220_KiTS2023.py
+│   │   ├───📄 Dataset988_dummyDataset4.py
+│   │   ├───📄 generate_dataset_json.py
+│   │   └───📄 __init__.py
+│   ├───📁 ensembling/
+│   │   ├───📄 ensemble.py
+│   │   └───📄 __init__.py
+│   ├───📁 evaluation/
+│   │   ├───📄 accumulate_cv_results.py
+│   │   ├───📄 evaluate_predictions.py
+│   │   ├───📄 find_best_configuration.py
+│   │   └───📄 __init__.py
+│   ├───📁 experiment_planning/
+│   │   ├───📁 dataset_fingerprint/
+│   │   │   ├───📄 fingerprint_extractor.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📁 experiment_planners/
+│   │   │   ├───📄 default_experiment_planner.py
+│   │   │   ├───📄 network_topology.py
+│   │   │   ├───📄 readme.md
+│   │   │   ├───📄 resencUNet_planner.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📁 plans_for_pretraining/
+│   │   │   ├───📄 move_plans_between_datasets.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📄 plan_and_preprocess_api.py
+│   │   ├───📄 plan_and_preprocess_entrypoints.py
+│   │   ├───📄 verify_dataset_integrity.py
+│   │   └───📄 __init__.py
+│   ├───📁 imageio/
+│   │   ├───📄 base_reader_writer.py
+│   │   ├───📄 natural_image_reager_writer.py
+│   │   ├───📄 nibabel_reader_writer.py
+│   │   ├───📄 reader_writer_registry.py
+│   │   ├───📄 readme.md
+│   │   ├───📄 simpleitk_reader_writer.py
+│   │   ├───📄 tif_reader_writer.py
+│   │   └───📄 __init__.py
+│   ├───📁 inference/
+│   │   ├───📄 data_iterators.py
+│   │   ├───📄 examples.py
+│   │   ├───📄 export_prediction.py
+│   │   ├───📄 predict_from_raw_data.py
+│   │   ├───📄 readme.md
+│   │   ├───📄 sliding_window_prediction.py
+│   │   └───📄 __init__.py
+│   ├───📁 model_sharing/
+│   │   ├───📄 entry_points.py
+│   │   ├───📄 model_download.py
+│   │   ├───📄 model_export.py
+│   │   ├───📄 model_import.py
+│   │   └───📄 __init__.py
+│   ├───📁 postprocessing/
+│   │   ├───📄 remove_connected_components.py
+│   │   └───📄 __init__.py
+│   ├───📁 preprocessing/
+│   │   ├───📁 cropping/
+│   │   │   ├───📄 cropping.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📁 normalization/
+│   │   │   ├───📄 default_normalization_schemes.py
+│   │   │   ├───📄 map_channel_name_to_normalization.py
+│   │   │   ├───📄 readme.md
+│   │   │   └───📄 __init__.py
+│   │   ├───📁 preprocessors/
+│   │   │   ├───📄 default_preprocessor.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📁 resampling/
+│   │   │   ├───📄 default_resampling.py
+│   │   │   ├───📄 utils.py
+│   │   │   └───📄 __init__.py
+│   │   └───📄 __init__.py
+│   ├───📁 run/
+│   │   ├───📄 load_pretrained_weights.py
+│   │   ├───📄 run_training.py
+│   │   └───📄 __init__.py
+│   ├───📁 tests/
+│   │   ├───📁 integration_tests/
+│   │   │   ├───📄 add_lowres_and_cascade.py
+│   │   │   ├───📄 cleanup_integration_test.py
+│   │   │   ├───📄 lsf_commands.sh
+│   │   │   ├───📄 prepare_integration_tests.sh
+│   │   │   ├───📄 readme.md
+│   │   │   ├───📄 run_integration_test.sh
+│   │   │   ├───📄 run_integration_test_bestconfig_inference.py
+│   │   │   ├───📄 run_integration_test_trainingOnly_DDP.sh
+│   │   │   └───📄 __init__.py
+│   │   └───📄 __init__.py
+│   ├───📁 training/
+│   │   ├───📁 dataloading/
+│   │   │   ├───📄 base_data_loader.py
+│   │   │   ├───📄 data_loader_2d.py
+│   │   │   ├───📄 data_loader_3d.py
+│   │   │   ├───📄 nnunet_dataset.py
+│   │   │   ├───📄 utils.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📁 data_augmentation/
+│   │   │   ├───📁 custom_transforms/
+│   │   │   │   ├───📄 cascade_transforms.py
+│   │   │   │   ├───📄 deep_supervision_donwsampling.py
+│   │   │   │   ├───📄 limited_length_multithreaded_augmenter.py
+│   │   │   │   ├───📄 manipulating_data_dict.py
+│   │   │   │   ├───📄 masking.py
+│   │   │   │   ├───📄 region_based_training.py
+│   │   │   │   ├───📄 transforms_for_dummy_2d.py
+│   │   │   │   └───📄 __init__.py
+│   │   │   ├───📄 compute_initial_patch_size.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📁 logging/
+│   │   │   ├───📄 nnunet_logger.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📁 loss/
+│   │   │   ├───📄 compound_losses.py
+│   │   │   ├───📄 deep_supervision.py
+│   │   │   ├───📄 dice.py
+│   │   │   ├───📄 robust_ce_loss.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📁 lr_scheduler/
+│   │   │   ├───📄 polylr.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📁 nnUNetTrainer/
+│   │   │   ├───📁 variants/
+│   │   │   │   ├───📁 benchmarking/
+│   │   │   │   │   ├───📄 nnUNetTrainerBenchmark_5epochs.py
+│   │   │   │   │   ├───📄 nnUNetTrainerBenchmark_5epochs_noDataLoading.py
+│   │   │   │   │   └───📄 __init__.py
+│   │   │   │   ├───📁 data_augmentation/
+│   │   │   │   │   ├───📄 nnUNetTrainerDA5.py
+│   │   │   │   │   ├───📄 nnUNetTrainerDAOrd0.py
+│   │   │   │   │   ├───📄 nnUNetTrainerNoDA.py
+│   │   │   │   │   ├───📄 nnUNetTrainerNoMirroring.py
+│   │   │   │   │   └───📄 __init__.py
+│   │   │   │   ├───📁 loss/
+│   │   │   │   │   ├───📄 nnUNetTrainerCELoss.py
+│   │   │   │   │   ├───📄 nnUNetTrainerDiceLoss.py
+│   │   │   │   │   ├───📄 nnUNetTrainerTopkLoss.py
+│   │   │   │   │   └───📄 __init__.py
+│   │   │   │   ├───📁 lr_schedule/
+│   │   │   │   │   ├───📄 nnUNetTrainerCosAnneal.py
+│   │   │   │   │   └───📄 __init__.py
+│   │   │   │   ├───📁 network_architecture/
+│   │   │   │   │   ├───📄 nnUNetTrainerBN.py
+│   │   │   │   │   ├───📄 nnUNetTrainerNoDeepSupervision.py
+│   │   │   │   │   └───📄 __init__.py
+│   │   │   │   ├───📁 optimizer/
+│   │   │   │   │   ├───📄 nnUNetTrainerAdam.py
+│   │   │   │   │   ├───📄 nnUNetTrainerAdan.py
+│   │   │   │   │   └───📄 __init__.py
+│   │   │   │   ├───📁 sampling/
+│   │   │   │   │   ├───📄 nnUNetTrainer_probabilisticOversampling.py
+│   │   │   │   │   └───📄 __init__.py
+│   │   │   │   ├───📁 training_length/
+│   │   │   │   │   ├───📄 nnUNetTrainer_Xepochs.py
+│   │   │   │   │   ├───📄 nnUNetTrainer_Xepochs_NoMirroring.py
+│   │   │   │   │   └───📄 __init__.py
+│   │   │   │   └───📄 __init__.py
+│   │   │   ├───📄 nnUNetTrainer.py
+│   │   │   └───📄 __init__.py
+│   │   └───📄 __init__.py
+│   ├───📁 utilities/
+│   │   ├───📁 label_handling/
+│   │   │   ├───📄 label_handling.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📁 plans_handling/
+│   │   │   ├───📄 plans_handler.py
+│   │   │   └───📄 __init__.py
+│   │   ├───📄 collate_outputs.py
+│   │   ├───📄 dataset_name_id_conversion.py
+│   │   ├───📄 ddp_allgather.py
+│   │   ├───📄 default_n_proc_DA.py
+│   │   ├───📄 file_path_utilities.py
+│   │   ├───📄 find_class_by_name.py
+│   │   ├───📄 get_network_from_plans.py
+│   │   ├───📄 helpers.py
+│   │   ├───📄 json_export.py
+│   │   ├───📄 network_initialization.py
+│   │   ├───📄 overlay_plots.py
+│   │   ├───📄 utils.py
+│   │   └───📄 __init__.py
+│   ├───📄 configuration.py
+│   ├───📄 paths.py
+│   └───📄 __init__.py
+├───📄 .gitignore
+├───📄 LICENSE
+├───📄 pyproject.toml
+├───📄 readme.md
+└───📄 setup.py
